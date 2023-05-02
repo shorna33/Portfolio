@@ -1,0 +1,89 @@
+@media(max-width: 600px) {
+    .myimg {
+        margin-left: 25%;
+    }
+}
+
+.db {
+    color: #36507d;
+}
+
+.db:hover {
+    color: white;
+}
+
+.exBut:hover {
+    background-color: #36507d;
+}
+
+.exPlus {
+    background-color: #36507d;
+}
+
+.fa-plus {
+    color: white;
+}
+
+.fa-plus:hover {
+    color: #36507d;
+}
+
+.fa-facebook-f {
+    transition: transform .4s;
+}
+
+.fa-facebook-f:hover {
+    background-color: #3b5998;
+    color: white;
+    border-radius: 50%;
+    margin-top: 1px;
+    transform: scale(1.5);
+}
+
+.fa-twitter {
+    transition: transform .4s;
+}
+
+.fa-twitter:hover {
+    background-color: white;
+    color: #1DA1F2;
+    border-radius: 50%;
+    margin-top: 1px;
+    transform: scale(1.5);
+}
+
+.fa-instagram {
+    transition: transform .4s;
+}
+
+.fa-instagram:hover {
+    background-image: linear-gradient(20deg, #fa7e1e, #d62976, #962fbf);;
+    color: white;
+    border-radius: 50%;
+    margin-top: 1px;
+    transform: scale(1.5);
+}
+
+.fa-linkedin-in {
+    transition: transform .4s;
+}
+
+.fa-linkedin-in:hover {
+    background-color: #0e76a8;
+    color: white;
+    border-radius: 50%;
+    margin-top: 1px;
+    transform: scale(1.5);
+}
+
+.fa-github {
+    transition: transform .4s;
+}
+
+.fa-github:hover {
+    background-color: #171515;
+    color: white;
+    border-radius: 50%;
+    margin-top: 1px;
+    transform: scale(1.5);
+}
