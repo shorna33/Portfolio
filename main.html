@@ -18,11 +18,12 @@
 </head>
 <body>
 
+    <!-- 90vh = 642px -->
     <!-- Background image -->
     <div class="bg-image bg-opacity-25" style="background-image: url('img/bg.jpg'); height: 90vh;">
         <!-- <div class="mask text-light" style="background-color: hsla(0, 0%, 98%, 0.2)"> -->
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong fixed-top mt-2">
             <!-- Container wrapper -->
             <div class="container-fluid">
             <!-- Navbar brand -->
@@ -46,43 +47,43 @@
                 <!-- Left links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#" class="nav-link" 
+                        <a href="#" class="nav-link" id="home"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#about me" class="nav-link"
+                        <a href="#about me" class="nav-link" id="aboutMe"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">About Me</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#education" class="nav-link"
+                        <a href="#education" class="nav-link" id="education"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Education</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#skills" class="nav-link"
+                        <a href="#skills" class="nav-link" id="skills"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#projects" class="nav-link"
+                        <a href="#projects" class="nav-link" id="projects"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#publications" class="nav-link"
+                        <a href="#publications" class="nav-link" id="publications"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Publications</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link"
+                        <a href="#contacts" class="nav-link"
                         style="color: rgb(232, 223, 225)" 
                         onmouseover="this.style.color= 'white'" 
                         onmouseout="this.style.color= 'rgb(232, 223, 225)'">Contacts</a>
@@ -257,7 +258,10 @@
                 <p>AH. Jui, <span class="fw-bold">S. Sharnami</span>, A. Islam.</p>
                 <p style="margin-top: -15px;">25th International Conference on Computer and Information Technology (ICCIT), Cox’s Bazar, Bangladesh, December, 2022</p>
                 <div class="d-flex flex-row-reverse">
-                    <a href="#demo" data-bs-toggle="collapse" class="btn exPlus"><i class="fa-solid fa-plus plus"></i></a>                    
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="popover" data-bs-trigger="hover focus" data-bs-content="Expand">
+                        <a href="#demo" data-bs-toggle="collapse" class="btn exPlus"><i class="fa-solid fa-plus plus"></i></a>   
+                    </span>
+                                     
                     <a href="https://ieeexplore.ieee.org/abstract/document/10055838" target="_blank" class="btn exBut"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square db"></i></a>
                     <a href="403.pdf" class="btn exBut"><i class="fa-solid fa-cloud-arrow-down db"></i></a>
                   </div>
@@ -283,7 +287,7 @@
     
 
     <!-- Contacts -->
-    <footer class="bg-dark text-white">
+    <footer class="foot text-white" id="contacts">
         <div class="container">
             <div class="row">
               <div class="col-md-7">
@@ -363,5 +367,6 @@
             duration: 1000
         });
     </script>
+    <script src="main.js"></script>
 </body>
 </html>

@@ -87,3 +87,14 @@
     margin-top: 1px;
     transform: scale(1.5);
 }
+
+/* .nav-link {
+    color: transparent;
+    filter: invert(100%);
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+} */
+
+.foot {
+    background-color: #36507d;
+}
