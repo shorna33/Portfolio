@@ -1,14 +1,30 @@
-// let height = screen.height;
-// function vh(percent) {
-//     var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-//     return (percent * h) / 100;
-//   }
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.scrollY
+//     console.log(scrolled)
+//     if (scrolled > 605) {
+//         document.getElementById("home1").style.color = 'black';
+//     }
+//     else if (scrolled < 605) {
+//         document.getElementById("home1").style.color = rgb(232, 223, 225);
+//     }
+// });
 
-//   console.log(vh(90))
-//   console.log(window.innerHeight)
-// // if (screen.height > vh(90)){
-// //     document.getElementById("home").style.color = "black";
-// // }
-// // else {
-// //     document.getElementById("home").style.color = rgb(232, 223, 225);
-// // }
+let sections = document.querySelectorAll('li');
+let navLinks = document.querySelectorAll('body div nav div div ul li a');
+
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.screenY;
+        let offset = sec.offsetTop;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('body div nav div div ul li a[href*=' + id + ']').classList.add('active');
+            });
+        };
+        
+    });
+};

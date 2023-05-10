@@ -20,6 +20,10 @@
     background-color: #36507d;
 }
 
+.active {
+    color: black;
+}
+
 .fa-plus {
     color: white;
 }
@@ -88,12 +92,24 @@
     transform: scale(1.5);
 }
 
+.nav-link {
+    font-size: 18px;
+    font-weight: 400;
+}
+
 /* .nav-link {
-    color: transparent;
+    color: whitesmoke;
+    -webkit-filter: invert(1);
+    filter: invert(1);
+    /* color: white;
     filter: invert(100%);
 	-moz-background-clip: text;
-	-webkit-background-clip: text;
+	-webkit-background-clip: text; 
 } */
+
+.popover {
+    background-color: black;
+}
 
 .foot {
     background-color: #36507d;
