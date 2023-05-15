@@ -9,22 +9,28 @@
 //     }
 // });
 
-let sections = document.querySelectorAll('li');
-let navLinks = document.querySelectorAll('body div nav div div ul li a');
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('div nav div div ul li a');
 
 window.onscroll = () => {
     sections.forEach(sec => {
-        let top = window.screenY;
-        let offset = sec.offsetTop;
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 100;
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
+
+        // if (id.onclick == true) {
+        //     links.classList.remove('active');
+        //     document.querySelector('div nav div div ul li a[href*=' + id + ']').classList.add('active');
+        // }
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
-                document.querySelector('body div nav div div ul li a[href*=' + id + ']').classList.add('active');
+                document.querySelector('div nav div div ul li a[href*=' + id + ']').classList.add('active');
             });
         };
+        
         
     });
 };

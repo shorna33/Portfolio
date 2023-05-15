@@ -4,6 +4,53 @@
     }
 }
 
+.bg-image {
+    height: 90vh;
+    position: relative;
+    text-align: center;
+}
+
+.bg-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(img/aleksandra-khaprenko-0PPw9irzLIw-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 90vh;
+    filter: blur(3px);
+    z-index:0;
+  }
+
+.text {
+    position: relative;
+    z-index:1;
+}
+
+.nav-link {
+    color: #303a4a;
+    font-weight: 600;
+    transition-property: color;
+    transition-duration: 0.1s;
+    transition-delay: 0.1s !important; 
+    transition-timing-function: ease-in-out;  
+}
+
+
+
+.nav-link:hover {
+    /* font-weight: 500; */
+    color: black;
+}
+
+.active {
+    font-weight: 700;
+    color: #36507d !important;
+}
+
+
 .db {
     color: #36507d;
 }
@@ -92,23 +139,10 @@
     transform: scale(1.5);
 }
 
-.nav-link {
-    font-size: 18px;
-    font-weight: 400;
-}
-
-/* .nav-link {
-    color: whitesmoke;
-    -webkit-filter: invert(1);
-    filter: invert(1);
-    /* color: white;
-    filter: invert(100%);
-	-moz-background-clip: text;
-	-webkit-background-clip: text; 
-} */
-
 .popover {
     background-color: black;
+    height: 35px;
+    line-height: 0px;
 }
 
 .foot {
