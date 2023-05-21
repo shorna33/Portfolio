@@ -21,20 +21,22 @@
 
     <div class="container" style="width: 90vh; margin-top: 12%;">
         <h2 class="text-center mb-5">Admin Log In</h2>
-        <form>
+        <form action="login.php" method="post">
+            <?php if(isset($_GET['error'])) { ?>
+                <p class="error"><?php echo $_GET['error'];?></p>
+            <?php } ?>
             <div class="form-group row mb-2">
               <div class="col-sm-12">
-                <input class="form-control" type="text" placeholder="Enter Username">
+                <input class="form-control" type="text" placeholder="Enter Username" name="uname">
               </div>
             </div>
             <div class="form-group row mb-3">
               <div class="col-sm-12">
-                <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" name="pass">
               </div>
             </div>
-            <div class="d-flex justify-content-center col-sm-12">
-                <a class="btn btn-dark rounded-pill" style="width: 90vh;" href="#" role="button">Enter</a>
-            </div>
+            <button class="btn btn-dark rounded-pill d-flex justify-content-center col-sm-12" style="width: 87vh;" type="submit">Enter</button>
+            
             
           </form>
     </div>
