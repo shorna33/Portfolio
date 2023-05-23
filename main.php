@@ -1,3 +1,7 @@
+<?php
+include "includes/connect.php";
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -152,60 +156,27 @@
 
         <div class="container">
             <div class="row text-sm-center pt-5">
+            <?php
+                $cell_query = "SELECT * FROM skills";
+                $cell_run = mysqli_query($conn, $cell_query);
+                $count = 0;
+                
+                while ($fetch = mysqli_fetch_assoc($cell_run)) {
+                    if ($count > 2) {
+                        $count = 0; ?>
+                        </div>
+                        <div class="row text-sm-center pt-5">
+                    <?php }?>              
+            
                 <div class="col-md">
-                    <img src="img/icons8-c-programming-480.png" class="d-inline-block" alt="c" style="width: 100px; height: 100px; margin-top: -20px;">
+                    <img src="./images/<?php echo $fetch['img'] ?>" class="d-inline-block" alt="c" style="width: 100px; height: 100px;">
                     <div class="d-inline-block m-5">
-                        <h2>C</h2>
+                        <h2><?php echo $fetch['skill']; ?></h2>
                     </div>
                 </div>
-                <div class="col-md">
-                    <img src="img/c++.png" class="d-inline-block" alt="c++" style="width: 100px; height: 100px; margin-top: -20px;">
-                    <div class="d-inline-block m-5">
-                        <h2>C++</h2>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <img src="img/python.png" class="d-inline-block" alt="python" style="width: 100px; height: 100px; margin-top: -20px;">
-                    <div class="d-inline-block m-5">
-                        <h2>Python</h2>
-                    </div>
-                </div>
+                <?php $count = $count + 1; }?>   
+                
             </div>
-            <div class="row text-sm-center pt-5">
-                <div class="col-md">
-                    <img src="img/program.png" class="d-inline-block" alt="problemSolving" style="width: 100px; height: 100px; margin-top: -80px;">
-                    <div class="d-inline-block m-5">
-                        <h2>Problem<br>Solving</h2>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <img src="img/boot.png" class="d-inline-block" alt="bootstrap" style="width: 100px; height: 100px;">
-                    <div class="d-inline-block m-5">
-                        <h2>Bootstrap</h2>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <img src="img/js.png" class="d-inline-block" alt="js" style="width: 100px; height: 100px;">
-                    <div class="d-inline-block m-5">
-                        <h2>JavaScript</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row text-sm-center">
-                <div class="col-md">
-                    <img src="img/php.png" class="d-inline-block" alt="php" style="width: 100px; height: 100px; margin-top: -20px;">
-                    <div class="d-inline-block m-5">
-                        <h2>PHP</h2>
-                    </div>
-                </div>
-                <div class="col-md">
-                    <img src="img/msql.png" class="d-inline-block" alt="mysql" style="width: 100px; height: 100px; margin-top: -20px;">
-                    <div class="d-inline-block m-5">
-                        <h2>MySQL</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         </div>
     </section>

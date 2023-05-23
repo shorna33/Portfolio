@@ -33,6 +33,31 @@
             <p>Hello <?php echo $_SESSION['uname']; ?>!</p>
             <a href="logout.php" class="btn btn-dark align-content-center">Logout</a>
         </div> -->
+        <?php
+            if(isset($_POST["s_submit"])) {
+                $lang = $_POST['lang'];
+
+                $logo_img = $_FILES['logo']['name'];
+                $logo_img_temp = $_FILES['logo']['tmp_name'];
+                move_uploaded_file($logo_img_temp, "./images/$logo_img");
+
+                $query = "INSERT INTO skills (img, skill) VALUES('$logo_img', '$lang')";
+                $run = mysqli_query($conn, $query);
+
+                // echo $logo_img, $lang;
+    
+                if ($run) {
+                    // echo "<script>alert('Inserted successfully')</script>";
+                    header('Location: admin.php');
+                    return;
+                }
+                else{
+                    echo "<script>alert('Insertion failed')</script>";
+                    return;
+                }
+                }
+                            
+        ?>
     
         <div class="container mt-5">
             <h1 class="text-center">Welcome to admin panel!</h1>
@@ -55,10 +80,31 @@
                         ?>
                         <tr>
                         <th scope="row"><?php echo $fetch['id']; ?></th>
-                        <td><div style="width: 40px; height: 40px;"><?php header("Content-Type: image/png"); echo $fetch['img']; ?></div></td>
+                        <td><img style="width: 40px; height: 40px;" src="./images/<?php echo $fetch['img'] ?>" /></td>
                         <td><?php echo $fetch['skill']; ?></td>
                         <td>
-                            <a href="#" class="btn btn-danger">Delete</a>
+                            <button name="delete" class="btn btn-danger">Delete</button>
+                            <?php
+                                if (isset($_POST['delete'])) {
+                                    $temp = $fetch['id'];
+                                    $sql = "DELETE FROM skills WHERE id = '$temp'";
+                                    $qry = mysqli_query($conn, $sql);
+
+                                    if($qry) {
+                                        echo "Data deleted successfully.";
+                                        header('Location: admin.php');
+                                        return;
+                                        // block of code to process further
+                                    }
+                                    else
+                                    {
+                                        echo "Something went wrong!<BR>";
+                                        echo "Error Description: ", $conn->error;
+                                        header('Location: admin.php');
+                                        return;
+                                    }
+                                }
+                            ?>
                         </td>
                         <td>                            
                             <a href="#" class="btn btn-primary">Edit</a>
@@ -68,24 +114,7 @@
                     </tbody>
                     </table>
 
-                    <?php
-                        if(isset($_POST["submit"])) {
-                            $image = $_FILES['logo']['tmp_name'];
-                            $logo = addslashes(file_get_contents($image));
-                            $lang = $_POST['lang'];
-
-                            $query = "INSERT INTO skills (img, skill) VALUES('$logo', '$lang')";
-                            $run = mysqli_query($conn, $query);
-                
-                            if ($run) {
-                                echo "<script>alert('Inserted successfully')</script>";
-                            }
-                            else{
-                                echo "<script>alert('Insertion failed')</script>";
-                            }
-                           }
-                                        
-                    ?>
+                    
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 45%;">
@@ -102,20 +131,26 @@
                         </div>
                         <div class="modal-body">
                         
-                        <form action="/firstProject/admin.php" method="post">
+                        <form action="./admin.php" method="post" enctype="multipart/form-data" class="has-validation">
                             <div class="form-group">
                                 <div class="mb-3">
                                     <label for="logo" class="form-label">Enter language logo</label>
-                                    <input class="form-control" type="file" id="logo" name="logo">
+                                    <input class="form-control" type="file" id="logo" name="logo" required>
+                                    <div class="invalid-feedback">
+                                        Please choose a Logo.
+                                    </div>
                                 </div>
                                 <div class="mb-3">
                                     <label for="lang" class="form-label">Language Name</label>
-                                    <input type="text" class="form-control" id="lang" name="lang">
+                                    <input type="text" class="form-control" id="lang" name="lang" required>
+                                    <div class="invalid-feedback">
+                                        Please choose the Language name.
+                                    </div>
                                 </div>  
                             </div>
                             <div class="float-end">                                
                                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                                <a type="button" href="admin.php" class="btn btn-primary" type="submit" name="submit">Submit</a>   
+                                <button class="btn btn-primary" type="submit" name="s_submit">Submit</button>   
                             </div>                                          
                         </form>
                         </div>
