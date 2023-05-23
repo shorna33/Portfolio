@@ -12,7 +12,6 @@
 session_start();
  
 // To check if the session is started.
-// niiiiiiii?
 if(isset($_SESSION["uname"]))
 {
  if(time()-$_SESSION["login_time_stamp"] > 600)

@@ -3,6 +3,7 @@
     include "includes/connect.php";
 
     if(isset($_SESSION['id']) && isset($_SESSION['uname'])) {
+        
 
 ?>
 
@@ -37,44 +38,54 @@
             <h1 class="text-center">Welcome to admin panel!</h1>
             <div class="container">
                 <table class="table table-hover table-dark table-striped table-lg mt-5">
-                    <thead>
+                    <thead class="text-center">
                         <tr>
                         <th scope="col">SL. No.</th>
                         <th scope="col">Image</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Action</th>
+                        <th scope="col" colspan="2">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="text-center">
+                        <?php
+                            $cell_query = "SELECT * FROM skills";
+                            $cell_run = mysqli_query($conn, $cell_query);
+                            
+                            while ($fetch = mysqli_fetch_assoc($cell_run)) {                            
+                        ?>
                         <tr>
-                        <th scope="row">1</th>
-                        <td><img src="img/icons8-c-programming-480.png" alt="c" style="width: 40px; height: 40px;"></td>
-                        <td>C</td>
+                        <th scope="row"><?php echo $fetch['id']; ?></th>
+                        <td><div style="width: 40px; height: 40px;"><?php header("Content-Type: image/png"); echo $fetch['img']; ?></div></td>
+                        <td><?php echo $fetch['skill']; ?></td>
                         <td>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-primary">Edit</button>
+                            <a href="#" class="btn btn-danger">Delete</a>
+                        </td>
+                        <td>                            
+                            <a href="#" class="btn btn-primary">Edit</a>
                         </td>
                         </tr>
-                        <tr>
-                        <th scope="row">2</th>
-                        <td><img src="img/c++.png" alt="c" style="width: 40px; height: 40px;"></td>
-                        <td>C++</td>
-                        <td>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-primary">Edit</button>
-                        </td>
-                        </tr>
-                        <tr>
-                        <th scope="row">3</th>
-                        <td><img src="img/python.png" alt="c" style="width: 40px; height: 40px;"></td>
-                        <td>Python</td>
-                        <td>
-                            <button class="btn btn-danger">Delete</button>
-                            <button class="btn btn-primary">Edit</button>
-                        </td>
-                        </tr>
+                        <?php }?>
                     </tbody>
                     </table>
+
+                    <?php
+                        if(isset($_POST["submit"])) {
+                            $image = $_FILES['logo']['tmp_name'];
+                            $logo = addslashes(file_get_contents($image));
+                            $lang = $_POST['lang'];
+
+                            $query = "INSERT INTO skills (img, skill) VALUES('$logo', '$lang')";
+                            $run = mysqli_query($conn, $query);
+                
+                            if ($run) {
+                                echo "<script>alert('Inserted successfully')</script>";
+                            }
+                            else{
+                                echo "<script>alert('Insertion failed')</script>";
+                            }
+                           }
+                                        
+                    ?>
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-left: 45%;">
@@ -91,26 +102,26 @@
                         </div>
                         <div class="modal-body">
                         
-                        <form action="admin.php" method="post">
-                            <div class="mb-3">
-                                <label for="formFile" class="form-label" name="logo">Enter language logo</label>
-                                <input class="form-control" type="file" id="formFile">
+                        <form action="/firstProject/admin.php" method="post">
+                            <div class="form-group">
+                                <div class="mb-3">
+                                    <label for="logo" class="form-label">Enter language logo</label>
+                                    <input class="form-control" type="file" id="logo" name="logo">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="lang" class="form-label">Language Name</label>
+                                    <input type="text" class="form-control" id="lang" name="lang">
+                                </div>  
                             </div>
-                            <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label" name="langName">Language Name</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1">
-                            </div>                            
+                            <div class="float-end">                                
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a type="button" href="admin.php" class="btn btn-primary" type="submit" name="submit">Submit</a>   
+                            </div>                                          
                         </form>
-
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary" type="submit">Submit</button>
                         </div>
                         </div>
                     </div>
                     </div>
-            </div>
             
 
     
