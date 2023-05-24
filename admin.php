@@ -2,8 +2,27 @@
     session_start();
     include "includes/connect.php";
 
+    // Delete data
     if(isset($_SESSION['id']) && isset($_SESSION['uname'])) {
+        if (isset($_GET['id'])) {
+            $id = $_GET['id'];
+            $sql = "DELETE FROM skills WHERE id = '$id'";
+            $qry = mysqli_query($conn, $sql);
         
+            if($qry) {
+                echo "Data deleted successfully.";
+                header("Location: admin.php");
+                return;
+            }
+            else
+            {
+                echo "Something went wrong!<BR>";
+                echo "Error Description: ", $conn->error;
+                // header('Location: admin.php');
+                // return;
+            }
+        }
+
 
 ?>
 
@@ -82,33 +101,8 @@
                         <th scope="row"><?php echo $fetch['id']; ?></th>
                         <td><img style="width: 40px; height: 40px;" src="./images/<?php echo $fetch['img'] ?>" /></td>
                         <td><?php echo $fetch['skill']; ?></td>
-                        <td>
-                            <button name="delete" class="btn btn-danger">Delete</button>
-                            <?php
-                                if (isset($_POST['delete'])) {
-                                    $temp = $fetch['id'];
-                                    $sql = "DELETE FROM skills WHERE id = '$temp'";
-                                    $qry = mysqli_query($conn, $sql);
-
-                                    if($qry) {
-                                        echo "Data deleted successfully.";
-                                        header('Location: admin.php');
-                                        return;
-                                        // block of code to process further
-                                    }
-                                    else
-                                    {
-                                        echo "Something went wrong!<BR>";
-                                        echo "Error Description: ", $conn->error;
-                                        header('Location: admin.php');
-                                        return;
-                                    }
-                                }
-                            ?>
-                        </td>
-                        <td>                            
-                            <a href="#" class="btn btn-primary">Edit</a>
-                        </td>
+                        <td><a href="admin.php?id=<?php echo $fetch['id']?>" class="btn btn-danger">Delete</a></td>
+                        <td><a href="update.php?id=<?php echo $fetch['id']?>" class="btn btn-primary">Edit</a></td>
                         </tr>
                         <?php }?>
                     </tbody>

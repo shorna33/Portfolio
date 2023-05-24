@@ -50,7 +50,6 @@
     color: #36507d !important;
 }
 
-
 .db {
     color: #36507d;
 }
@@ -58,6 +57,8 @@
 .db:hover {
     color: white;
 }
+
+
 
 .exBut:hover {
     background-color: #36507d;
@@ -209,3 +210,4 @@
     transform: translateY(0);
     transition-duration: 500ms, 200ms;
 }
+

@@ -19,6 +19,22 @@ include "includes/connect.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+
+    <style>
+        .cv {
+            background-color: #36507d !important;
+
+        }
+
+        .cv:hover {
+            background-color: #4d6083 !important;
+        }
+
+        .cvi {
+            color: white;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -154,8 +170,8 @@ include "includes/connect.php";
             <hr style="width: 98%;">
         </div>
 
-        <div class="container">
-            <div class="row text-sm-center pt-5">
+        <div class="container ps-5">
+            <div class="row pt-5">
             <?php
                 $cell_query = "SELECT * FROM skills";
                 $cell_run = mysqli_query($conn, $cell_query);
@@ -165,10 +181,10 @@ include "includes/connect.php";
                     if ($count > 2) {
                         $count = 0; ?>
                         </div>
-                        <div class="row text-sm-center pt-5">
+                        <div class="row pt-5">
                     <?php }?>              
             
-                <div class="col-md">
+                <div class="col-md hover-shadow">
                     <img src="./images/<?php echo $fetch['img'] ?>" class="d-inline-block" alt="c" style="width: 100px; height: 100px;">
                     <div class="d-inline-block m-5">
                         <h2><?php echo $fetch['skill']; ?></h2>
@@ -176,6 +192,10 @@ include "includes/connect.php";
                 </div>
                 <?php $count = $count + 1; }?>   
                 
+            </div>
+
+            <div class="d-flex justify-content-center mt-5">
+                <a href="files/shorna.pdf" class="btn cv rounded-pill text-light"><i class="fa-solid fa-down-to-bracket cvi"></i> Download CV</a>
             </div>
 
         </div>
@@ -232,7 +252,7 @@ include "includes/connect.php";
                         data-mdb-trigger="hover"
                         data-mdb-html="true" target="_blank" class="btn exBut"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square db"></i>
                     </a>
-                    <a href="403.pdf" data-mdb-toggle="popover"
+                    <a href="files/403.pdf" data-mdb-toggle="popover"
                         data-mdb-placement="top"
                         data-mdb-content="<span class='text-light'>Download</span>"
                         data-mdb-trigger="hover"
