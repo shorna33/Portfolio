@@ -8,6 +8,7 @@ include "includes/connect.php";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Samia Sharnami</title>
+    <link rel="icon" href="img/dp.jpg" type="image/gif/png">
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" rel="stylesheet"/>
@@ -126,7 +127,7 @@ include "includes/connect.php";
                     <div class="container text-center text-sm-start my-4">
                         <h1>Samia Sharnami</h1>
                         <p>I am a Front-end developer. I'm enthusiastic about web development and problem solving. I have a deep understanding of web development 
-                            technologies, including HTML, CSS, and JavaScript, and I use my skills to create responsive and interactive websites and applications 
+                            technologies, including HTML, CSS, PHP, and JavaScript, and I use my skills to create responsive and interactive websites and applications 
                             that work seamlessly across different devices and platforms.</p>
                     </div>                    
                 </div>
