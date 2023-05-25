@@ -1,6 +1,6 @@
 <?php
 session_start();
-  include "includes/connect.php";
+  include "../includes/connect.php";
 
   if(isset($_POST['uname']) && isset($_POST['pass'])){
 
@@ -16,11 +16,11 @@ session_start();
   $pass = validate($_POST['pass']);
 
   if(empty($uname)) {
-    header("Location: index.php?error=Username is required");
+    header("Location: main.php?error=Username is required");
     exit();
   }
   else if(empty($pass)) {
-    header("Location: index.php?error=Password is required");
+    header("Location: main.php?error=Password is required");
     exit();
   }
 
@@ -40,7 +40,7 @@ session_start();
     
   }
   else{
-    header("Location: index.php?error=Incorrect credentials");
+    header("Location: main.php?error=Incorrect credentials");
     exit();
   }
 

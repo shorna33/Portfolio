@@ -1,13 +1,12 @@
 <?php 
 // Include the database configuration file  
-include 'includes/connect.php'; 
+include '../includes/connect.php'; 
 
 // For displaying existing information
 $f_id = $img = $lang = "";
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    echo $id;
 
     $sql = "SELECT * FROM skills WHERE id = '$id'";
     $run = mysqli_query($conn, $sql);

@@ -1,6 +1,6 @@
 <?php
     session_start();
-    include "includes/connect.php";
+    include "../includes/connect.php";
 
     // Delete data
     if(isset($_SESSION['id']) && isset($_SESSION['uname'])) {
@@ -154,10 +154,19 @@
             
 
     
-            <a href="logout.php" class="btn btn-dark float-end mt-5">Logout</a>
+            <a href="logout.php" class="btn btn-dark float-end mt-5 mb-5">Logout</a>
+                            </div>
         </div>
         
-
+        <!-- <div>
+            <footer>
+                
+                <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2023 Copyright: Samia Sharnami
+                </div>
+                
+            </footer>
+        </div> -->
 
 
         <!-- MDB -->
@@ -165,13 +174,15 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
         
+        
+        
     </body>
     </html>
 
     <?php
     }
     else{
-        header("Location: index.php");
+        header("Location: main.php");
         exit();
     }
     ?>
