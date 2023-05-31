@@ -7,6 +7,8 @@ window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
     let height_home = hom.offsetHeight - 40;
 
+    // console.log(height_home);
+    // console.log(scrolled);
     
     if (scrolled >= height_home) {
         h.forEach(link => {
@@ -32,24 +34,30 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
         let height_hom = hom.offsetHeight - 40;
+
+        // console.log(top);
+        // console.log(height_hom);
         
 
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 if (top >= height_hom) {
-                    links.setAttribute('style', 'color: #415880 !important; font-weight: 600 !important;');
+                    // links.setAttribute('style', 'color: #415880 !important; font-weight: 600 !important;');
+                    links.style.color = '#415880';
+                    links.style.fontWeight = '600';
                 }
-                let activeDiv = document.querySelector('div nav div div ul li a[href*=' + id + ']');
-                activeDiv.classList.add('active');
-                if (top >= height_hom && activeDiv.classList.contains('active')) {
-                    links.setAttribute('style', 'color: #36507d !important;');
+                document.querySelector('div nav div div ul li a[href*=' + id + ']').classList.add('active');
+                
+                if (top >= height_hom && links.classList.contains('active')) {
+                    // links.setAttribute('style', 'color: #36507d !important;');
+                    links.style.color = '#36507d';
                     links.style.fontWeight = "700";
                 }
-                // else if (top < height_hom && activeDiv.classList.contains('active')) {
-                //     activeDiv.setAttribute('style', 'color: white !important;');
-                //     activeDiv.style.fontWeight = "700";
-                // }
+                else if (top < height_hom && links.classList.contains('active')) {
+                    links.style.color = 'white';
+                    links.style.fontWeight = "700";
+                }
             });
         };
         
@@ -76,7 +84,7 @@ let calcScrollValue = () => {
     scrollProgress.style.background = `conic-gradient(#36507d ${scrollValue}%, #d7d7d7 ${scrollValue}%)`;
 };
 
-window.onscroll = calcScrollValue;
+window.addEventListener('scroll', calcScrollValue);
 window.onload = calcScrollValue;
 
 

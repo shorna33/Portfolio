@@ -1,4 +1,9 @@
 
+* {
+    scroll-behavior: smooth;
+}
+
+/* background image  */
 .bg-image {
     height: 100vh;
     width: 100%;
@@ -23,6 +28,7 @@
     z-index:0;
 }
 
+/* scroll up button  */
 #progress {
     position: fixed;
     bottom: 40px;
@@ -53,6 +59,7 @@
     color: #36507d;
 }
 
+/* home page pic  */
 .me {
     position: relative;
     height: 400px;
@@ -83,6 +90,7 @@
     /* box-shadow: 2px 2px 4px #FFFFFF; */
 }
 
+/* home page intro  */
 .caption {
     position: relative;
     height: 220px;
@@ -150,6 +158,7 @@
     }
 }
 
+/* intro social media link  */
 .soc {
     display: inline-flex;
 }
@@ -257,7 +266,7 @@
     background: #0e76a8;
 }
 
-
+/* navbar link  */
 .nav-link {
     color: #cacdcf;
     font-weight: 600;
@@ -277,6 +286,7 @@
     overflow: hidden;
 }
 
+/* research section button  */
 .db {
     color: #36507d;
 }
@@ -285,18 +295,12 @@
     color: white;
 }
 
-
-
 .exBut:hover {
     background-color: #36507d;
 }
 
 .exPlus {
     background-color: #36507d;
-}
-
-.active {
-    color: black;
 }
 
 .fa-plus {
@@ -307,6 +311,13 @@
     color: #36507d;
 }
 
+.popover {
+    background-color: black;
+    height: 35px;
+    line-height: 0px;
+}
+
+/* footer social media link  */
 .fb {
     transition: transform .4s;
 }
@@ -367,16 +378,16 @@
     transform: scale(1.5);
 }
 
-.popover {
-    background-color: black;
-    height: 35px;
-    line-height: 0px;
+.hor {
+    display: none;
 }
 
+/* footer  */
 .foot {
     background-color: #36507d;
 }
 
+/* project thumbnail image */
 .image {
     position: relative;
     width: 60vh;
@@ -434,10 +445,6 @@
     color: white;
 }
 
-.hor {
-    display: none;
-}
-
 
 @media(max-width: 1200px) {
     .me {
@@ -449,14 +456,6 @@
         left: 5vh;
         top: -10vh;
     }
-
-    /* .caption.cap h1 {
-        font-size: 20px;
-    }
-
-    .caption.cap.text {
-        font-size: 5px !important;
-    } */
 }
 
 @media(max-width: 994px) {
@@ -504,11 +503,6 @@
     .hor {
         display: inline;
     }
-
-    /* .caption {
-        left: 10%;
-        top: 40%;
-    } */
 }
 
 @media(max-width: 680px) {
@@ -568,10 +562,7 @@
 
     .image {
         width: 30vh;
-        height: 15vh;
-        /* left: 15%;
-        top: 3%; */
-        
+        height: 15vh;        
     }
 
     .icon {

@@ -37,9 +37,7 @@ include "includes/connect.php";
 
 </head>
 <body>
-    <div id="progress">
-        <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>    
-    </div>
+    
 
     <!-- 90vh = 642px -->
     <!-- Background image -->
@@ -71,7 +69,7 @@ include "includes/connect.php";
                 <!-- Left links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active mx-2 sel">Home</a>
+                        <a href="#home" class="nav-link active mx-2">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link mx-2">About Me</a>
@@ -98,6 +96,9 @@ include "includes/connect.php";
             </div>
             <!-- Container wrapper -->
         </nav>
+        <div id="progress">
+            <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>    
+        </div>
         
         <!-- Navbar -->
         <!-- </div> -->
@@ -257,7 +258,7 @@ include "includes/connect.php";
                     <div class="image mt-5 mx-sm-5 mb-5">
                         <img src="img/library.png" alt="library" class="image__img">
                         <div class="image__overlay image__overlay__blur">
-                            <a href="#" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                            <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
                         </div>
                         <h4 class="mt-4 mb-5 text-center" style="padding-bottom: 500px;">A Laravel based Library Management System</h4>
                     </div>
@@ -266,10 +267,10 @@ include "includes/connect.php";
                     <div class="image mt-5 mx-sm-5 mb-5">
                         <img src="img/tourism.png" alt="library" class="image__img">
                         <div class="image__overlay image__overlay__blur">
-                            <a href="#" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                            <a href="http://tourville.great-site.net/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
                             
                         </div>
-                        <h4 class="mt-4 mb-5 text-center">A PHP and MySQL based Library Management System</h4>
+                        <h4 class="mt-4 mb-5 text-center">A PHP and MySQL based Tourism Management System</h4>
                     </div>
                 </div>
             </div>
@@ -443,6 +444,6 @@ include "includes/connect.php";
         //     headBg.style.backgroundPositionY = - +window.scrollY/2+'px'
         // })
     </script>
-    <script src="index.js"></script>
+    <script src="index.js" type="text/javascript"></script>
 </body>
 </html>
