@@ -10,8 +10,10 @@ include "includes/connect.php";
     <title>Samia Sharnami</title>
     <link rel="icon" href="img/dp.jpg" type="image/gif/png">
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.css" rel="stylesheet"/>
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" type='text/css'/> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Raleway font -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
     <!-- js aos -->
@@ -20,7 +22,7 @@ include "includes/connect.php";
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.2.0/mdb.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=<?php echo time(); ?>">
 
     <style>
         .cv {
@@ -35,10 +37,13 @@ include "includes/connect.php";
 
 </head>
 <body>
+    <div id="progress">
+        <span id="progress-value"><i class="fa-solid fa-arrow-up"></i></span>    
+    </div>
 
     <!-- 90vh = 642px -->
     <!-- Background image -->
-    <section id="home">
+    <section id="home" class="hom">
     <div class="bg-image">
         <!-- <div class="mask text-light" style="background-color: hsla(0, 0%, 98%, 0.2)"> -->
         <!-- Navbar -->
@@ -58,7 +63,7 @@ include "includes/connect.php";
                 aria-expanded="false"
                 aria-label="Toggle navigation"
             >
-                <i class="fas fa-bars" style="color: black;"></i>
+                <i class="fas fa-bars"></i>
             </button>
         
             <!-- Collapsible wrapper -->
@@ -66,7 +71,7 @@ include "includes/connect.php";
                 <!-- Left links -->
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link active text-dark mx-2">Home</a>
+                        <a href="#home" class="nav-link active mx-2 sel">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#about" class="nav-link mx-2">About Me</a>
@@ -99,7 +104,7 @@ include "includes/connect.php";
 
         
         
-        <div class="text text-end text-dark d-flex justify-content-center" style="padding-top: 200px;" data-aos="fade-up">
+        <!-- <div class="text text-end text-dark d-flex justify-content-center" style="padding-top: 200px;" data-aos="fade-up">
             <figure class="p-3">
                 <blockquote class="blockquote pt-3" style="padding-right: 0px;">
                     <p class="pb-2 font-italic">
@@ -110,7 +115,44 @@ include "includes/connect.php";
                         Mahatma Gandhi
                     </figcaption>
             </figure>
+        </div> -->
+
+        <div class="me" data-aos="fade-up-left">
+            <img src="img/IMG_20201115_225732_887.jpg" alt="shorna" class="me-pic">
         </div>
+        
+        <div class="caption hover-shadow" data-aos="fade-up-right">
+            <div class="container cap pt-3">
+                <h1 class="ms-3 fw-bold cap2">Samia Sharnami</h1>
+                <span class="text first-text ms-3">I'm a</span>
+                <span class="text sec-text ms-2"></span>
+            </div>
+            
+            <div class="container soc mt-3">
+                <div class="icon github">
+                    <a href="https://github.com/shorna33" target="_blank"><i class="fab fa-github"></i></a>
+                    <div class="tool">GitHub</div>
+                </div>
+                <div class="icon facebook">
+                    <a href="https://www.facebook.com/shorna225" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                    <div class="tool">Facebook</div>
+                </div>
+                <div class="icon twitter">
+                    <a href="https://twitter.com/SamiaShorna1" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+                    <div class="tool">Twitter</div>
+                </div>
+                <div class="icon instagram">
+                    <a href="https://www.instagram.com/shorna.1" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <div class="tool">Instagram</div>
+                </div>
+                <div class="icon linkedin">
+                    <a href="https://www.linkedin.com/in/samia-sharnami-7b11b11ab" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <div class="tool">LinkedIn</div>
+                </div>
+            </div>
+        </div>
+            
+        
 
     </div>
 </section>
@@ -144,9 +186,9 @@ include "includes/connect.php";
         </div>
 
         <div class="container mt-3 hover-shadow">
-            <div class="wrapper d-flex">
-                <img src="img/uni.png" class="mt-5 ms-2 mb-2" alt="uni" style="height: 150px; width: 100px;">
-                <div class="p-5 justify-content">
+            <div class="wrapper d-sm-flex">
+                <img src="img/uni.png" class="mt-5 ms-2 mb-2 align-content-center" alt="uni" style="height: 150px; width: 100px;">
+                <div class="p-sm-5 justify-content">
                     <p class="fs-4 fw-bold">B.Sc. Engineering in Computer Science and Engineering Discipline</p>
                     <p class="fw-bold">
                         CGPA 3.59 out of 4.00 <br>
@@ -168,7 +210,7 @@ include "includes/connect.php";
             <hr style="width: 98%;">
         </div>
 
-        <div class="container ps-5">
+        <div class="container ps-sm-5 sk">
             <div class="row pt-5">
             <?php
                 $cell_query = "SELECT * FROM skills";
@@ -179,12 +221,12 @@ include "includes/connect.php";
                     if ($count > 2) {
                         $count = 0; ?>
                         </div>
-                        <div class="row pt-5">
+                        <div class="row pt-sm-5">
                     <?php }?>              
             
-                <div class="col-md hover-shadow">
-                    <img src="./admin/images/<?php echo $fetch['img'] ?>" class="d-inline-block" alt="c" style="width: 100px; height: 100px;">
-                    <div class="d-inline-block m-5">
+                <div class="col-md hover-shadow d-flex align-items-center sk">
+                    <img src="./admin/images/<?php echo $fetch['img'] ?>" class="d-md-inline-block m-3 m-xs-5" alt="c" style="width: 100px; height: 100px;">
+                    <div class="d-md-inline-block">
                         <h2><?php echo $fetch['skill']; ?></h2>
                     </div>
                 </div>
@@ -194,7 +236,7 @@ include "includes/connect.php";
 
             <div class="d-flex justify-content-center mt-5">
                 <a href="files/shorna.pdf" class="btn cv rounded-pill text-light">
-                    Download CV <i class="fa-solid fa-down-to-bracket" style="color: white;"></i>
+                <i class="fa-solid fa-cloud-arrow-down"></i> Download CV
                 </a>
             </div>
 
@@ -211,17 +253,17 @@ include "includes/connect.php";
 
         <div class="container d-flex justify-content-center">
             <div class="row">
-                <div class="col-sm-6" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5">
+                <div class="col-lg-6" data-aos="zoom-in">
+                    <div class="image mt-5 mx-sm-5 mb-5">
                         <img src="img/library.png" alt="library" class="image__img">
                         <div class="image__overlay image__overlay__blur">
                             <a href="#" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
                         </div>
-                        <h4 class="mt-4 mb-5 text-center">A Laravel based Library Management System</h4>
+                        <h4 class="mt-4 mb-5 text-center" style="padding-bottom: 500px;">A Laravel based Library Management System</h4>
                     </div>
                 </div>
-                <div class="col-sm-6 mt-5 mt-sm-0" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5">
+                <div class="col-lg-6 mt-5 mt-sm-0" data-aos="zoom-in">
+                    <div class="image mt-5 mx-sm-5 mb-5">
                         <img src="img/tourism.png" alt="library" class="image__img">
                         <div class="image__overlay image__overlay__blur">
                             <a href="#" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
@@ -299,53 +341,55 @@ include "includes/connect.php";
         <div class="container">
             <div class="row">
               <div class="col-md-7">
-                <div class="container p-4 pb-0">
+                <div class="container p-4 pb-0 con">
                     <h3>Contact Me</h3> 
                     <hr style="width: 90%;">
                     <div>
                         <i class="fa-solid fa-envelope d-inline-block"></i>
-                        <p class="d-inline-block ms-2">samiasharnami225@gmail.com</p>
+                        <p class="d-inline-block ms-2 contact">samiasharnami225@gmail.com</p>
                     </div>
                     <div style="margin-top: -5px;">
                         <i class="fa-sharp fa-solid fa-phone d-inline-block"></i>
-                        <p class="d-inline-block ms-2">+8801763-873861</p>
+                        <p class="d-inline-block ms-2 contact">+8801763-873861</p>
                     </div>
                     <div style="margin-top: -5px;">
                         <i class="fa-sharp fa-solid fa-location-dot d-inline-block"></i>
-                        <p class="d-inline-block ms-2">Chhatian, Mirpur, Kushtia, Khulna</p>
+                        <p class="d-inline-block ms-2 contact">Chhatian, Mirpur, Kushtia, Khulna</p>
                     </div>
                     
                 </div>
               </div>
+              
               <div class="col-md">
                 <!-- Grid container -->
-                <div class="container p-4 pb-0">
+                <div class="container p-4 pb-0 con">
                     <h3>Follow Me on</h3>
+                    <hr class="hor" style="width: 90%;">
                 <!-- Section: Social media -->
                 <div class="mb-4 mt-4">
                     <!-- Github -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://github.com/shorna33" role="button"
-                    ><i class="fab fa-github"></i
+                    ><i class="fab fa-github git"></i
                     ></a>                    
 
                     <!-- Facebook -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.facebook.com/shorna225" role="button"
-                    ><i class="fab fa-facebook-f"></i
+                    ><i class="fab fa-facebook-f fb"></i
                     ></a>
             
                     <!-- Twitter -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://twitter.com/SamiaShorna1" role="button"
-                    ><i class="fab fa-twitter"></i
+                    ><i class="fab fa-twitter tw"></i
                     ></a>
             
                     <!-- Instagram -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.instagram.com/shorna.1" role="button"
-                    ><i class="fab fa-instagram"></i
+                    ><i class="fab fa-instagram insta"></i
                     ></a>
             
                     <!-- Linkedin -->
                     <a class="btn btn-outline-light btn-floating m-1" target="_blank" href="https://www.linkedin.com/in/samia-sharnami-7b11b11ab" role="button"
-                    ><i class="fab fa-linkedin-in"></i
+                    ><i class="fab fa-linkedin-in linked"></i
                     ></a>
                 </div>               
                 <!-- Section: Social media -->
@@ -375,6 +419,29 @@ include "includes/connect.php";
         AOS.init({
             duration: 1000
         });
+
+        
+        // Home section Animation
+        const text = document.querySelector('.sec-text');
+
+        const textLoad = () => {
+            setTimeout(() => {
+                text.textContent = 'Programmer';
+            }, 0);
+            setTimeout(() => {
+                text.textContent = 'Front-end Developer';
+            }, 4000);
+        }
+
+        textLoad();
+        setInterval(textLoad, 8000);
+
+        // var headBg = document.getElementById('bg-image')
+        // window.addEventListener('scroll', function() {
+        //     headBg.style.opacity = 1 - +window.scrollY/550+''
+        //     headBg.style.top = +window.scrollY+'px'
+        //     headBg.style.backgroundPositionY = - +window.scrollY/2+'px'
+        // })
     </script>
     <script src="index.js"></script>
 </body>

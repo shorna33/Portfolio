@@ -44,6 +44,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="main.css">
+
     </head>
 
     <body>
@@ -100,7 +101,7 @@
                         <tr>
                         <th scope="row"><?php echo $fetch['id']; ?></th>
                         <td><img style="width: 40px; height: 40px;" src="./images/<?php echo $fetch['img'] ?>" /></td>
-                        <td><?php echo $fetch['skill']; ?></td>
+                        <td class="align-middle"><?php echo $fetch['skill']; ?></td>
                         <td><a href="admin.php?id=<?php echo $fetch['id']?>" class="btn btn-danger">Delete</a></td>
                         <td><a href="update.php?id=<?php echo $fetch['id']?>" class="btn btn-primary">Edit</a></td>
                         </tr>
