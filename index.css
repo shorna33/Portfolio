@@ -445,6 +445,11 @@
     color: white;
 }
 
+.bottom-text {
+    width: 60vh;
+    height: 35vh;
+}
+
 
 @media(max-width: 1200px) {
     .me {
@@ -471,6 +476,10 @@
     .image {
         margin: auto;
         top: 5%;
+    }
+
+    .bottom-text {
+        margin: auto;
     }
 }
 
@@ -542,6 +551,15 @@
         height: 20vh;
         
     }
+
+    .bottom-text {
+        width: 40vh;
+        height: 20vh;
+    }
+
+    .second-row {
+        margin-top: 70px;
+    }
 }
 
 @media(max-width: 500px) {
@@ -563,6 +581,19 @@
     .image {
         width: 30vh;
         height: 15vh;        
+    }
+
+    .bottom-text {
+        width: 30vh;
+        height: 15vh;        
+    }
+
+    .second {
+        padding-top: 150px;
+    }
+
+    #publications {
+        padding-top: 100px;
     }
 
     .icon {
