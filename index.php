@@ -104,7 +104,7 @@ include "includes/connect.php";
 
 
         <div class="me" data-aos="fade-up-left">
-            <img src="img/IMG_20201115_225732_887.jpg" alt="shorna" class="me-pic">
+            <img src="img/cover_me.jpg" alt="shorna" class="me-pic">
         </div>
         
         <div class="caption hover-shadow" data-aos="fade-up-right">
@@ -327,9 +327,57 @@ include "includes/connect.php";
                         <h4 class="text-center">Portfolio</h4>
                         <p class="text-justify" style="color: gray;">Get code from <a href="https://github.com/shorna33/Portfolio.git" target="_blank">here</a>.</p>
                         <p class="text-justify" style="color: gray;">Language and Technologies used: PHP, Bootstrap, JavaScript, MySQL.</p>
-                    </div>                    
+                    </div>
                 </div>
             </div>
+
+            <div class="row d-flex justify-content-center second-row">
+                <div class="col-lg-6 second" data-aos="zoom-in">
+                    <div class="image mt-5 mx-sm-5 mb-3">
+                        <img src="img/contactapp.png" alt="contactapp" class="image__img">
+                        <div class="image__overlay image__overlay__blur">
+                            <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                        </div>                        
+                    </div>
+                    <div class="bottom-text mx-sm-5 mt-5">
+                        <h4 class="text-center">Contact Manager Application</h4>
+                        <p class="text-justify" style="color: gray;">A contact manager application can be used to save, edit, and delete contacts. Get code from 
+                        <a href="https://github.com/shorna33/contactApp.git" target="_blank">here</a>.</p>
+                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, JSON Server.</p>
+                    </div>                    
+                </div>
+                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
+                    <div class="image mt-5 mx-sm-5 mb-3">
+                        <img src="img/todo.png" alt="todo" class="image__img">
+                        <div class="image__overlay image__overlay__blur">
+                            <a href="https://tododemoapplication.netlify.app/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                        </div>                        
+                    </div>
+                    <div class="bottom-text mx-sm-5 mt-5">
+                        <h4 class="text-center">To-do List</h4>
+                        <p class="text-justify" style="color: gray;">A to-do list application can be used to create, edit, and delete tasks, and set the task state to completed or incomplete.
+                        Get code from <a href="https://github.com/shorna33/to-doApp.git" target="_blank">here</a>.</p>
+                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, Bootstrap, JSON Server.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="row d-flex justify-content-center second-row">
+                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
+                    <div class="image mt-5 mx-sm-5 mb-3">
+                        <img src="img/contactapp.png" alt="contactapp" class="image__img">
+                        <div class="image__overlay image__overlay__blur">
+                            <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                        </div>                        
+                    </div>
+                    <div class="bottom-text mx-sm-5 mt-5">
+                        <h4 class="text-center">Contact Manager Application</h4>
+                        <p class="text-justify" style="color: gray;">A contact manager application can be used to save, edit, and delete contacts. 
+                        Get code from <a href="https://github.com/shorna33/contactApp.git" target="_blank">here</a>.</p>
+                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, JSON Server.</p>
+                    </div>
+                </div>
+            </div> -->
             
         </div>
         
