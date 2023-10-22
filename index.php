@@ -256,9 +256,9 @@ include "includes/connect.php";
         </div>
     </section>
     
-    
+
     <!-- Projects -->
-    <section class="m-5 overflo-auto" id="projects" data-aos="fade-up">
+    <section  class="m-5" id="projects" data-aos="fade-up">
         <div class="container">
             <h1>Projects</h1>
             <hr style="width: 98%;">
@@ -270,119 +270,105 @@ include "includes/connect.php";
         </div>
 
         <div class="container">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-6" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/library.png" alt="library" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
+            <div class="row pt-4">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/library.png" alt="library" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
                             <a href="https://cseseminarlibrary.000webhostapp.com/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">CSE Seminar Library</h4>
+                            <p class="text-justify" style="color: gray;">CSE Seminar Library is a Library Management System which can be used to search, view, and issue books, check which book is issued
+                                and by whom. Get code from <a href="https://github.com/shorna33/library.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: Laravel, Bootstrap, PHP, MySQL.</p>
+                        </div>
                     </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">CSE Seminar Library</h4>
-                        <p class="text-justify" style="color: gray;">CSE Seminar Library is a Library Management System which can be used to search, view, and issue books, check which book is issued
-                            and by whom. Get code from <a href="https://github.com/shorna33/library.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: Laravel, Bootstrap, PHP, MySQL.</p>
-                    </div>                    
                 </div>
-                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/tourism.png" alt="library" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
-                            <a href="http://tourville.great-site.net/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/tourism.png" alt="tourism" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
+                            <a href="http://tourville.infinityfreeapp.com/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">Tourville</h4>
+                            <p class="text-justify" style="color: gray;">Tourville is Tourism Management System which can be used to view and search tour agencies and packages. Packages can also
+                                be booked from this application. Get code from <a href="https://github.com/shorna33/tourville.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: PHP, Bootstrap, MySQL.</p>
+                        </div>
                     </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">Tourville</h4>
-                        <p class="text-justify" style="color: gray;">Tourville is Tourism Management System which can be used to view and search tour agencies and packages. Packages can also
-                            be booked from this application. Get code from <a href="https://github.com/shorna33/tourville.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: PHP, Bootstrap, MySQL.</p>
-                    </div>                    
                 </div>
-            </div>
-
-            <div class="row d-flex justify-content-center second-row">
-                <div class="col-lg-6 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/crud.png" alt="blog" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/crud.png" alt="blog" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
                             <a href="http://personalblogposts.000webhostapp.com/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">Personal Blog Application</h4>
+                            <p class="text-justify" style="color: gray;">A personal blog post application which can be used to post, edit, and delete simple blogs. Get code from 
+                            <a href="https://github.com/shorna33/Laravel-CRUD-Application.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: Laravel, Bootstrap, PHP, MySQL.</p>
+                        </div>
                     </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">Personal Blog Application</h4>
-                        <p class="text-justify" style="color: gray;">A personal blog post application which can be used to post, edit, and delete simple blogs. Get code from 
-                        <a href="https://github.com/shorna33/Laravel-CRUD-Application.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: Laravel, Bootstrap, PHP, MySQL.</p>
-                    </div>                    
                 </div>
-                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/portfolio.png" alt="portfolio" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/portfolio.png" alt="portfolio" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
                             <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
-                    </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">Portfolio</h4>
-                        <p class="text-justify" style="color: gray;">Get code from <a href="https://github.com/shorna33/Portfolio.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: PHP, Bootstrap, JavaScript, MySQL.</p>
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">Portfolio</h4>
+                            <p class="text-justify" style="color: gray;">Get code from <a href="https://github.com/shorna33/Portfolio.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: PHP, Bootstrap, JavaScript, MySQL.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <div class="row d-flex justify-content-center second-row">
-                <div class="col-lg-6 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/contactapp.png" alt="contactapp" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/contactapp.png" alt="contactapp" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
                             <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">Contact Manager Application</h4>
+                            <p class="text-justify" style="color: gray;">A contact manager application can be used to save, edit, and delete contacts. Get code from 
+                            <a href="https://github.com/shorna33/contactApp.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, JSON Server.</p>
+                        </div>
                     </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">Contact Manager Application</h4>
-                        <p class="text-justify" style="color: gray;">A contact manager application can be used to save, edit, and delete contacts. Get code from 
-                        <a href="https://github.com/shorna33/contactApp.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, JSON Server.</p>
-                    </div>                    
                 </div>
-                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/todo.png" alt="todo" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
+                <div class="col-lg-4 col-md-6 col-sm-12 p-3" data-aos="zoom-in">
+                    <div class="d-flex flex-column align-items-center">
+                        <div class="image">
+                            <img src="img/todo.png" alt="todo" class="h-auto w-auto img-fluid image__img">
+                            <div class="image__overlay image__overlay__blur">
                             <a href="https://tododemoapplication.netlify.app/" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
-                    </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">To-do List</h4>
-                        <p class="text-justify" style="color: gray;">A to-do list application can be used to create, edit, and delete tasks, and set the task state to completed or incomplete.
-                        Get code from <a href="https://github.com/shorna33/to-doApp.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, Bootstrap, JSON Server.</p>
+                            </div>
+                        </div>
+                        <div class="pt-5">
+                            <h4 class="text-center">To-do List</h4>
+                            <p class="text-justify" style="color: gray;">A to-do list application can be used to create, edit, and delete tasks, and set the task state to completed or incomplete.
+                            Get code from <a href="https://github.com/shorna33/to-doApp.git" target="_blank">here</a>.</p>
+                            <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, Bootstrap, JSON Server.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- <div class="row d-flex justify-content-center second-row">
-                <div class="col-lg-6 mt-5 mt-sm-0 second" data-aos="zoom-in">
-                    <div class="image mt-5 mx-sm-5 mb-3">
-                        <img src="img/contactapp.png" alt="contactapp" class="image__img">
-                        <div class="image__overlay image__overlay__blur">
-                            <a href="#" target="_blank" class="image__desc">Show preview  <i class="fa-solid fa-arrow-right" style="color: white;"></i></a>
-                        </div>                        
-                    </div>
-                    <div class="bottom-text mx-sm-5 mt-5">
-                        <h4 class="text-center">Contact Manager Application</h4>
-                        <p class="text-justify" style="color: gray;">A contact manager application can be used to save, edit, and delete contacts. 
-                        Get code from <a href="https://github.com/shorna33/contactApp.git" target="_blank">here</a>.</p>
-                        <p class="text-justify" style="color: gray;">Language and Technologies used: React JS, JavaScript, JSON Server.</p>
-                    </div>
-                </div>
-            </div> -->
-            
         </div>
-        
 
-        <!-- <div style="height: 150px;"></div> -->
     </section>
 
 

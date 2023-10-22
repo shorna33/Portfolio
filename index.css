@@ -389,8 +389,6 @@
 /* project thumbnail image */
 .image {
   position: relative;
-  width: 60vh;
-  height: 35vh;
 }
 
 .image__img {
